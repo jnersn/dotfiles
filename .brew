@@ -1,0 +1,122 @@
+#!/usr/bin/env bash
+
+# Install command-line tools using Homebrew.
+
+# Ask for the administrator password upfront.
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until the script has finished.
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# Make sure we’re using the latest Homebrew.
+brew update
+
+# Upgrade any already-installed formulae.
+brew upgrade --all
+
+brew install coreutils
+brew install moreutils
+brew install findutils
+brew install gnu-sed
+brew install wget
+brew install vim
+brew install binutils
+brew install git
+brew install git-lfs
+brew install imagemagick
+brew install p7zip
+brew install php56-xdebug
+brew install brew-gem
+brew install rename
+brew install speedtest_cli
+brew install ssh-copy-id
+brew install testssl
+brew install tree
+brew install webkit2png
+brew install x264
+brew install lame
+brew install xvid
+brew install ffmpeg
+brew install mongodb
+brew install Caskroom/versions/java7
+brew install elasticsearch
+brew install solr
+brew install htop
+brew install geoip
+brew install ccrypt
+brew install automake
+brew install lftp
+brew install sqlite
+brew install python
+brew install python3
+brew install apr
+brew install fontconfig
+brew install icu4c
+brew install libtool
+brew install mod_fastcgi
+brew install pkg-config
+brew install apr-util
+brew install freetype
+brew install libusb
+brew install mysql
+brew install rbenv
+brew install wine
+brew install sphinx
+brew install postgresql
+brew install redis
+brew install autoconf
+brew install gd
+brew install jasper
+brew install libusb-compat
+brew install nettle
+brew install readline
+brew install winetricks
+brew install brew-cask
+brew install gdbm
+brew install jpeg
+brew install libxml2
+brew install node
+brew install ruby
+brew install xz
+brew install cabextract
+brew install gettext
+brew install libgphoto2
+brew install libyaml
+brew install openssl
+brew install ruby-build
+brew install zlib
+brew install cmake
+brew install libicns
+brew install little-cms2
+brew install p7zip
+brew install sane-backends
+brew install zsh
+brew install composer
+brew install gmp
+brew install libpng
+brew install makedepend
+brew install pcre
+brew install sphinx-doc
+brew install dnsmasq
+brew install gnutls
+brew install libtasn1
+brew install mcrypt
+brew install php56
+brew install php56-geoip
+brew install php56-intl
+brew install php56-memcached
+brew install php56-mongodb
+brew install php56-solr
+brew install php56-sphinx
+brew install php56-twig
+brew install php56-varnish
+brew install php56-yaml
+brew install unixodbc
+brew install editorconfig
+brew install httpd22
+brew install libtiff
+brew install mhash
+brew install php56-mcrypt
+brew install unrar
+
+brew cleanup
