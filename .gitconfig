@@ -20,3 +20,6 @@
     default = simple
 [help]
     autocorrect = 1
+[user]
+	name = Janne Räisänen
+	email = janne@jraisanen.com
