@@ -4,7 +4,7 @@ ZSH_THEME="sorin"
 
 DISABLE_AUTO_UPDATE="true"
 
-plugins=(bower brew command-not-found composer docker encode64 git git-flow github jira jsontools last-working-dir meteor node npm osx sudo symfony2 vagrant)
+plugins=(bower brew command-not-found composer docker encode64 git git-flow github jira jsontools last-working-dir meteor node npm osx sudo symfony2 vagrant zsh-autosuggestions zsh-syntax-highlighting)
 
 export PATH="/usr/local/bin:$PATH"
 
