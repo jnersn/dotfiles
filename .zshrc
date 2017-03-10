@@ -4,7 +4,7 @@ ZSH_THEME="sorin"
 
 DISABLE_AUTO_UPDATE="true"
 
-plugins=(bower brew command-not-found composer docker encode64 git git-flow github jira jsontools last-working-dir meteor node npm osx sudo symfony2 vagrant zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(brew command-not-found composer docker encode64 git git-flow github jira jsontools last-working-dir meteor node npm osx sudo vagrant zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
 
 export PATH="/usr/local/bin:$PATH"
 
@@ -19,6 +19,12 @@ export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
 
 LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
+
+export GOPATH=$HOME/Sites/www/go
+export GOBIN=$HOME/Sites/www/go/bin
+export PATH=$PATH:$GOPATH/bin
+
+export PATH="$PATH:`yarn global bin`"
 
 autoload -U promptinit; promptinit
 prompt pure
