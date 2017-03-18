@@ -1,30 +1,29 @@
-export ZSH=$HOME/.oh-my-zsh
-
+# Oh my zsh
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="sorin"
-
-DISABLE_AUTO_UPDATE="true"
-
-plugins=(brew command-not-found composer docker encode64 git git-flow github jira jsontools last-working-dir meteor node npm osx sudo vagrant zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
-
-export PATH="/usr/local/bin:$PATH"
-
+plugins=(brew common-aliases docker git git-flow github history last-working-dir meteor node npm osx sublime sudo vagrant zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
+# Go
+export GOPATH="$HOME/Sites/www/go"
+export GOBIN="$GOPATH/bin"
+
+# Php
+export PHPBIN="$(brew --prefix homebrew/php/php71)/bin"
+
+# Ruby
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-export NVM_DIR="/Users/jraisanen/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# Nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+# Update
+export HOMEBIN="$HOME/bin"
 
-LC_CTYPE=en_US.UTF-8
-LC_ALL=en_US.UTF-8
+# Path
+export PATH="$PATH:$PHPBIN:$GOBIN:$HOMEBIN"
 
-export GOPATH=$HOME/Sites/www/go
-export GOBIN=$HOME/Sites/www/go/bin
-export PATH=$PATH:$GOPATH/bin
-
-export PATH="$PATH:`yarn global bin`"
-
+# Pure prompt
 autoload -U promptinit; promptinit
 prompt pure
